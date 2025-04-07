@@ -1,19 +1,41 @@
 plugins {
     java
+    `maven-publish`
 }
 
 group = "net.onelitefeather.guira"
-version = "1.0-SNAPSHOT"
+version = "1.0.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    compileOnly(libs.aves)
+
+    testImplementation(libs.aves)
+    testImplementation(libs.junit.api)
+    testRuntimeOnly(libs.junit.engine)
 }
 
-tasks.test {
-    useJUnitPlatform()
+tasks {
+    compileJava {
+        options.encoding = "UTF-8"
+        options.release.set(21)
+    }
+
+    compileTestJava {
+        options.encoding = "UTF-8"
+        options.release.set(21)
+    }
+
+    test {
+        useJUnitPlatform()
+        testLogging {
+            events("passed", "skipped", "failed")
+        }
+    }
 }
+
