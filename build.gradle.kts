@@ -1,11 +1,12 @@
 plugins {
-    `java-library`
     jacoco
+    `java-library`
     `maven-publish`
+    alias(libs.plugins.publishdata)
 }
 
 group = "net.onelitefeather.guira"
-version = "1.0.0-SNAPSHOT"
+version = "1.0.0"
 
 java {
     toolchain {
@@ -19,6 +20,13 @@ dependencies {
     testImplementation(libs.aves)
     testImplementation(libs.junit.api)
     testRuntimeOnly(libs.junit.engine)
+}
+
+publishData {
+    addMainRepo("https://repo.onelitefeather.dev/onelitefeather-releases")
+    addMasterRepo("https://repo.onelitefeather.dev/onelitefeather-releases")
+    addSnapshotRepo("https://repo.onelitefeather.dev/onelitefeather-snapshots")
+    publishTask("jar")
 }
 
 tasks {
@@ -37,6 +45,30 @@ tasks {
         useJUnitPlatform()
         testLogging {
             events("passed", "skipped", "failed")
+        }
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            // configure the publication as defined previously.
+            publishData.configurePublication(this)
+            version = publishData.getVersion(false)
+        }
+    }
+    repositories {
+        maven {
+            authentication {
+                credentials(PasswordCredentials::class) {
+                    username = System.getenv("ONELITEFEATHER_MAVEN_USERNAME")
+                    password = System.getenv("ONELITEFEATHER_MAVEN_PASSWORD")
+                }
+            }
+
+            name = "OneLiteFeatherRepository"
+            // Get the detected repository from the publish data
+            url = uri(publishData.getRepository())
         }
     }
 }
