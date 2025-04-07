@@ -1,5 +1,6 @@
 plugins {
-    java
+    `java-library`
+    jacoco
     `maven-publish`
 }
 
@@ -32,6 +33,7 @@ tasks {
     }
 
     test {
+        finalizedBy(jacocoTestReport)
         useJUnitPlatform()
         testLogging {
             events("passed", "skipped", "failed")
