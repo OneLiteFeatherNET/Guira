@@ -15,8 +15,12 @@ java {
 }
 
 dependencies {
+    compileOnly(libs.minestom)
+    compileOnly(libs.jetbrains.annotation)
     compileOnly(libs.aves)
 
+    testImplementation(libs.minestom)
+    testImplementation(libs.minestom.test)
     testImplementation(libs.aves)
     testImplementation(libs.junit.api)
     testRuntimeOnly(libs.junit.engine)
@@ -43,6 +47,7 @@ tasks {
     test {
         finalizedBy(jacocoTestReport)
         useJUnitPlatform()
+        jvmArgs("-Dminestom.inside-test=true")
         testLogging {
             events("passed", "skipped", "failed")
         }
