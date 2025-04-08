@@ -18,7 +18,7 @@ class SetupFinishEventTest extends BasicDataTest {
         SetupData<BaseMap> data = new NopSetupData(uuid, emptyMapEntry);
         SetupFinishEvent<SetupData<BaseMap>> event = new SetupFinishEvent<>(data);
         assertNotNull(event);
-        assertInstanceOf(NopSetupData.class, event.setupData());
+        assertInstanceOf(NopSetupData.class, event.getData());
 
         assertFalse(event.isCancelled());
         event.setCancelled(true);
