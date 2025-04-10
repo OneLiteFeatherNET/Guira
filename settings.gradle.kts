@@ -1,4 +1,4 @@
-rootProject.name = "Guira"
+rootProject.name = "guira"
 
 pluginManagement {
     repositories {
