@@ -1,4 +1,5 @@
 plugins {
+    java
     jacoco
     `java-library`
     `maven-publish`
