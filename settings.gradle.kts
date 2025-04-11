@@ -30,7 +30,7 @@ dependencyResolutionManagement {
         create("libs") {
             version("minestom", "1.5.1")
             version("aves", "1.6.1")
-            version("junit", "5.12.1")
+            version("junit", "5.12.2")
             version("publishdata", "1.4.0")
             version("jetbrains.annotation", "26.0.2")
 
