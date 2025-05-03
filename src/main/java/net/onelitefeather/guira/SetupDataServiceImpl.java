@@ -1,12 +1,15 @@
 package net.onelitefeather.guira;
 
 import de.icevizion.aves.map.BaseMap;
-import net.onelitefeather.guira.data.BaseSetupData;
 import net.onelitefeather.guira.data.SetupData;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.UnmodifiableView;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+import java.util.UUID;
 
 public final class SetupDataServiceImpl<T extends SetupData<? extends BaseMap>> implements SetupDataService<T> {
 
