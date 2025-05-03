@@ -18,7 +18,7 @@ import java.util.UUID;
  * @param <T> the type of setup data
  * @author thEvilReaper
  * @version 1.0.0
- * @since 1.0.0
+ * @since 0.1.0
  */
 public interface SetupDataService<T extends SetupData<? extends BaseMap>> {
 
