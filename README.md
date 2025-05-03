@@ -40,11 +40,12 @@ service.remove(uuid);
 
 ### Event Handling
 
+Guira provides events such as `SetupCreateEvent` and `SetupFinishEvent` for managing the setup process lifecycle.
+
 > [!NOTE]
 > **Guira does NOT automatically fire any of the provided events (`SetupCreateEvent`, `SetupFinishEvent`, etc).**
 > You are responsible for triggering and handling these events in your own code/context (e.g., your Minestom server plugin or application).
 
-Guira provides events such as `SetupCreateEvent` and `SetupFinishEvent` for managing the setup process lifecycle. *Note:* These events are not triggered automatically by Guira itself; you must call and handle them explicitly in your own context (e.g., your Minestom server plugin or application).
 
 ## API Overview
 
