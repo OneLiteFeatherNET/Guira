@@ -8,6 +8,14 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
 
+/**
+ * The {@link BaseSetupData} is a generic implementation of the {@link SetupData} interface.
+ * It provides a basic implementation and needs to be extended by a specific setup data class.
+ * @param <T> the reference type of the map
+ * @version 1.0.0
+ * @since 0.1.0
+ * @author theEvilReaper
+ */
 public abstract non-sealed class BaseSetupData<T extends BaseMap> implements SetupData<T> {
 
     protected final UUID uuid;

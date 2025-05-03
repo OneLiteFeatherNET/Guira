@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
  * @param <T> the reference type of the map
  * @author theEvilReaper
  * @version 1.0.0
- * @since 1.0.0
+ * @since 0.1.0
  */
 public final class SetupFinishEvent<T extends SetupData<? extends BaseMap>> implements Event, CancellableEvent {
 
