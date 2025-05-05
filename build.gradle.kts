@@ -6,7 +6,7 @@ plugins {
     alias(libs.plugins.publishdata)
 }
 
-group = "net.onelitefeather.guira"
+group = "net.onelitefeather"
 version = "0.1.0"
 
 java {
