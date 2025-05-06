@@ -1,6 +1,6 @@
 package net.onelitefeather.guira.data;
 
-import de.icevizion.aves.map.BaseMap;
+import net.theevilreaper.aves.map.BaseMap;
 import net.onelitefeather.guira.BasicDataTest;
 import net.onelitefeather.guira.util.NopSetupData;
 import org.junit.jupiter.api.Test;

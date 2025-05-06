@@ -1,6 +1,6 @@
 package net.onelitefeather.guira.event;
 
-import de.icevizion.aves.map.BaseMap;
+import net.theevilreaper.aves.map.BaseMap;
 import net.onelitefeather.guira.BasicDataTest;
 import net.onelitefeather.guira.data.SetupData;
 import net.onelitefeather.guira.util.NopSetupData;

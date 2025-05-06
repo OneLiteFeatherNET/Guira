@@ -1,6 +1,6 @@
 package net.onelitefeather.guira;
 
-import de.icevizion.aves.map.BaseMap;
+import net.theevilreaper.aves.map.BaseMap;
 import net.onelitefeather.guira.data.SetupData;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;

@@ -1,6 +1,6 @@
 package net.onelitefeather.guira;
 
-import de.icevizion.aves.map.MapEntry;
+import net.theevilreaper.aves.map.MapEntry;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
