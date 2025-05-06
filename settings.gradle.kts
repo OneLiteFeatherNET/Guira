@@ -28,20 +28,21 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("libs") {
-            version("minestom", "1.5.1")
-            version("aves", "1.6.1")
-            version("junit", "5.12.2")
+            version("aves", "1.8.0")
             version("publishdata", "1.4.0")
-            version("jetbrains.annotation", "26.0.2")
+            version("bom", "1.2.3")
 
-            library("minestom", "net.onelitefeather.microtus", "Microtus").versionRef("minestom")
-            library("minestom.test", "net.onelitefeather.microtus.testing", "testing").versionRef("minestom")
+            library("mycelium.bom", "net.onelitefeather", "mycelium-bom").versionRef("bom")
 
-            library("aves", "de.icevizion.lib", "aves").versionRef("aves")
+            library("minestom","net.minestom", "minestom-snapshots").withoutVersion()
+            library("cyano", "net.onelitefeather", "cyano").withoutVersion()
 
-            library("junit.api", "org.junit.jupiter", "junit-jupiter-api").versionRef("junit")
-            library("junit.engine", "org.junit.jupiter", "junit-jupiter-engine").versionRef("junit")
-            library("jetbrains.annotation", "org.jetbrains", "annotations").versionRef("jetbrains.annotation")
+            library("aves", "net.theevilreaper", "aves").versionRef("aves")
+
+            library("junit.api", "org.junit.jupiter", "junit-jupiter-api").withoutVersion()
+            library("junit.engine", "org.junit.jupiter", "junit-jupiter-engine").withoutVersion()
+            library("junit.platform.launcher", "org.junit.platform", "junit-platform-launcher").withoutVersion()
+            library("jetbrains.annotation", "org.jetbrains", "annotations").withoutVersion()
 
             plugin("publishdata", "de.chojo.publishdata").versionRef("publishdata")
         }
