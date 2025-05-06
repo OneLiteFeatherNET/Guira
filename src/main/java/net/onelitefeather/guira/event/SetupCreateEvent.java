@@ -1,6 +1,6 @@
 package net.onelitefeather.guira.event;
 
-import de.icevizion.aves.map.BaseMap;
+import net.theevilreaper.aves.map.BaseMap;
 import net.minestom.server.event.Event;
 import net.minestom.server.event.trait.CancellableEvent;
 import net.onelitefeather.guira.data.SetupData;
