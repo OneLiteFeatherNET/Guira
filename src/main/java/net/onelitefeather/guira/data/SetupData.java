@@ -1,7 +1,7 @@
 package net.onelitefeather.guira.data;
 
-import de.icevizion.aves.map.BaseMap;
-import de.icevizion.aves.map.MapEntry;
+import net.theevilreaper.aves.map.BaseMap;
+import net.theevilreaper.aves.map.MapEntry;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Optional;

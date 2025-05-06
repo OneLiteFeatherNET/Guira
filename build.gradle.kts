@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "net.onelitefeather"
-version = "0.1.0"
+version = "0.2.0"
 
 java {
     toolchain {
@@ -16,14 +16,16 @@ java {
 }
 
 dependencies {
+    implementation(platform(libs.mycelium.bom))
     compileOnly(libs.minestom)
     compileOnly(libs.jetbrains.annotation)
     compileOnly(libs.aves)
 
     testImplementation(libs.minestom)
-    testImplementation(libs.minestom.test)
+    testImplementation(libs.cyano)
     testImplementation(libs.aves)
     testImplementation(libs.junit.api)
+    testImplementation(libs.junit.platform.launcher)
     testRuntimeOnly(libs.junit.engine)
 }
 
