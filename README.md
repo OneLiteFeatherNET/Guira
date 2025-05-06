@@ -1,10 +1,10 @@
 # Guira
 
 Guira is a lightweight Java library designed to help you implement flexible and robust setup processes for games,
-minigames, or any other custom features on a [Minestom](https://github.com/Minestom/Minestom) server. Rather than
-enforcing a fixed setup structure, Guira empowers you to define exactly what your setup should contain such as maps,
-teams, rules, or any other configuration by letting you design your own setup data types and logic. The library provides
-a solid and extensible foundation for storing, tracking, and managing this setup data, making it easy to build tailored
+minigames or any other custom features on a [Minestom](https://github.com/Minestom/Minestom) server. Rather than
+enforcing a fixed setup structure, Guira empowers you to define exactly what your setup should contain, such as maps,
+teams, rules or any other configuration by letting you design your own setup data types and logic. The library provides
+a solid and extensible foundation for storing, tracking and managing this setup data, making it easy to build tailored
 setup flows for a wide range of server scenarios.
 
 ## Installation
@@ -13,7 +13,7 @@ Add the following to your `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    compileOnly("net.onelitefeather:guira:<version>>")
+    compileOnly("net.onelitefeather:guira:<version>")
 }
 ```
 
