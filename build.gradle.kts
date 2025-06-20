@@ -20,6 +20,7 @@ dependencies {
     compileOnly(libs.minestom)
     compileOnly(libs.jetbrains.annotation)
     compileOnly(libs.aves)
+    compileOnly(libs.junit.api)
 
     testImplementation(libs.minestom)
     testImplementation(libs.cyano)
