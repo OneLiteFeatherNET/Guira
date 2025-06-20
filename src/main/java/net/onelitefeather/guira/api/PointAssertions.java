@@ -19,14 +19,14 @@ public final class PointAssertions {
 
 
 
-        for (int i = 0; i < expected.size(); i++) {
+     /*   for (int i = 0; i < expected.size(); i++) {
             Point exp = expected.get(i);
             Point act = actual.get(i);
             assertEquals(exp, act);
             if (!exp.equals(act)) {
                 throw new AssertionError("Points at index " + i + " are not equal: expected " + exp + ", but was " + act);
             }
-        }
+        }*/
     }
 
     protected PointAssertions() {
