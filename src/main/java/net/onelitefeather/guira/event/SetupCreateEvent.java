@@ -15,7 +15,7 @@ import org.jetbrains.annotations.NotNull;
  * @version 1.0.0
  * @since 0.1.0
  */
-public final class SetupCreateEvent<T extends SetupData<? extends BaseMap>> implements Event, CancellableEvent {
+public class SetupCreateEvent<T extends SetupData<? extends BaseMap>> implements Event, CancellableEvent {
 
     private boolean cancelled;
     private final T data;
