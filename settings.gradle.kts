@@ -34,7 +34,7 @@ dependencyResolutionManagement {
 
             library("mycelium.bom", "net.onelitefeather", "mycelium-bom").versionRef("bom")
 
-            library("minestom","net.minestom", "minestom-snapshots").withoutVersion()
+            library("minestom","net.minestom", "minestom").withoutVersion()
             library("cyano", "net.onelitefeather", "cyano").withoutVersion()
 
             library("aves", "net.theevilreaper", "aves").versionRef("aves")
