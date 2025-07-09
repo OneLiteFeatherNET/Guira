@@ -28,13 +28,13 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("libs") {
-            version("aves", "1.8.0")
+            version("aves", "1.9.0")
             version("publishdata", "1.4.0")
-            version("bom", "1.2.3")
+            version("bom", "1.3.0")
 
             library("mycelium.bom", "net.onelitefeather", "mycelium-bom").versionRef("bom")
 
-            library("minestom","net.minestom", "minestom-snapshots").withoutVersion()
+            library("minestom","net.minestom", "minestom").withoutVersion()
             library("cyano", "net.onelitefeather", "cyano").withoutVersion()
 
             library("aves", "net.theevilreaper", "aves").versionRef("aves")
