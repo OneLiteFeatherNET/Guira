@@ -1,6 +1,5 @@
 package net.onelitefeather.guira;
 
-import net.theevilreaper.aves.map.BaseMap;
 import net.onelitefeather.guira.data.SetupData;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.UnmodifiableView;
@@ -11,31 +10,31 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
-public final class SetupDataServiceImpl<T extends SetupData<? extends BaseMap>> implements SetupDataService<T> {
+public final class SetupDataServiceImpl implements SetupDataService {
 
-    private final Map<UUID, T> dataMap;
+    private final Map<UUID, SetupData> dataMap;
 
     SetupDataServiceImpl() {
         this.dataMap = new HashMap<>();
     }
 
     @Override
-    public void add(@NotNull UUID uuid, @NotNull T data) {
+    public void add(@NotNull UUID uuid, @NotNull SetupData data) {
         dataMap.put(uuid, data);
     }
 
     @Override
-    public @NotNull Optional<T> remove(@NotNull UUID uuid) {
+    public @NotNull Optional<SetupData> remove(@NotNull UUID uuid) {
         return Optional.ofNullable(this.dataMap.remove(uuid));
     }
 
     @Override
-    public @NotNull Optional<T> get(@NotNull UUID uuid) {
+    public @NotNull Optional<SetupData> get(@NotNull UUID uuid) {
         return Optional.ofNullable(this.dataMap.get(uuid));
     }
 
     @Override
-    public @NotNull @UnmodifiableView Map<UUID, T> getView() {
+    public @NotNull @UnmodifiableView Map<UUID, SetupData> getView() {
         return Collections.unmodifiableMap(this.dataMap);
     }
 }
