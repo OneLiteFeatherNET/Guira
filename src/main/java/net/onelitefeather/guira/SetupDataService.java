@@ -32,6 +32,19 @@ public interface SetupDataService {
     }
 
     /**
+     * Checks if the service contains any setup data.
+     *
+     * @return true if the service is empty, false otherwise
+     */
+    boolean isEmpty();
+
+    /**
+     * Clears all setup data from the service.
+     * This method removes all entries from the setup data map.
+     */
+    void clear();
+
+    /**
      * Adds new setup data to the service.
      *
      * @param uuid the unique identifier for the setup data
