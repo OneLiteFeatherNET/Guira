@@ -9,7 +9,6 @@ import org.jetbrains.annotations.NotNull;
  * The {@link SetupCreateEvent} can be used to indicate that a setup has started by the owner.
  * You need to call it on your own and the handling of it.
  *
- * @param <T> the reference from the data
  * @author thEvilReaper
  * @version 1.0.0
  * @since 0.1.0
