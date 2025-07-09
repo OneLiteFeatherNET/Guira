@@ -1,16 +1,28 @@
 package net.onelitefeather.guira.util;
 
-import net.theevilreaper.aves.map.BaseMap;
-import net.theevilreaper.aves.map.MapEntry;
-import net.onelitefeather.guira.data.BaseSetupData;
+import net.onelitefeather.guira.data.SetupData;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
 import java.util.UUID;
 
-public final class NopSetupData extends BaseSetupData<BaseMap> {
+public final class NopSetupData implements SetupData {
 
-    public NopSetupData(@NotNull UUID uuid, @NotNull MapEntry mapEntry) {
-        super(uuid, mapEntry);
+    private final UUID uuid;
+
+    public NopSetupData(@NotNull UUID uuid) {
+        this.uuid = uuid;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof NopSetupData that)) return false;
+        return Objects.equals(uuid, that.uuid);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(uuid);
     }
 
     @Override
@@ -26,5 +38,10 @@ public final class NopSetupData extends BaseSetupData<BaseMap> {
     @Override
     public void loadData() {
         throw new UnsupportedOperationException("Not supported yet");
+    }
+
+    @Override
+    public @NotNull UUID getId() {
+        return this.uuid;
     }
 }

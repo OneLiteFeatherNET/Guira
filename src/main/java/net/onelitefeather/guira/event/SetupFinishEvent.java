@@ -1,6 +1,5 @@
 package net.onelitefeather.guira.event;
 
-import net.theevilreaper.aves.map.BaseMap;
 import net.minestom.server.event.Event;
 import net.minestom.server.event.trait.CancellableEvent;
 import net.onelitefeather.guira.data.SetupData;
@@ -8,17 +7,16 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * The {@link SetupFinishEvent} can be used to indicate that a setup process has been finished by the user.
- * If your use case has some condition which needs to be checked before the setup process is finished, you can cancel
+ * If your use case has some condition that needs to be checked before the setup process is finished, you can cancel
  * the event. But you need to handle the cancellation yourself.
  *
- * @param <T> the reference type of the map
  * @author theEvilReaper
  * @version 1.0.0
  * @since 0.1.0
  */
-public final class SetupFinishEvent<T extends SetupData<? extends BaseMap>> implements Event, CancellableEvent {
+public class SetupFinishEvent implements Event, CancellableEvent {
 
-    private final @NotNull T setupData;
+    private final SetupData setupData;
     private boolean cancelled;
 
     /**
@@ -26,7 +24,7 @@ public final class SetupFinishEvent<T extends SetupData<? extends BaseMap>> impl
      *
      * @param setupData the setup data of the event
      */
-    public SetupFinishEvent(@NotNull T setupData) {
+    public SetupFinishEvent(@NotNull SetupData setupData) {
         this.setupData = setupData;
     }
 
@@ -55,7 +53,7 @@ public final class SetupFinishEvent<T extends SetupData<? extends BaseMap>> impl
      *
      * @return the setup data
      */
-    public @NotNull T getData() {
+    public @NotNull SetupData getData() {
         return setupData;
     }
 }
