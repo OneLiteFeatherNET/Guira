@@ -1,6 +1,5 @@
 package net.onelitefeather.guira.event;
 
-import net.theevilreaper.aves.map.BaseMap;
 import net.minestom.server.event.Event;
 import net.minestom.server.event.trait.CancellableEvent;
 import net.onelitefeather.guira.data.SetupData;
@@ -10,17 +9,16 @@ import org.jetbrains.annotations.NotNull;
  * The {@link SetupCreateEvent} can be used to indicate that a setup has started by the owner.
  * You need to call it on your own and the handling of it.
  *
- * @param <T> the reference from the data
  * @author thEvilReaper
  * @version 1.0.0
  * @since 0.1.0
  */
-public class SetupCreateEvent<T extends SetupData<? extends BaseMap>> implements Event, CancellableEvent {
+public class SetupCreateEvent implements Event, CancellableEvent {
 
     private boolean cancelled;
-    private final T data;
+    private final SetupData data;
 
-    public SetupCreateEvent(@NotNull T data) {
+    public SetupCreateEvent(@NotNull SetupData data) {
         this.data = data;
     }
 
@@ -29,7 +27,7 @@ public class SetupCreateEvent<T extends SetupData<? extends BaseMap>> implements
      *
      * @return the reference
      */
-    public T getData() {
+    public SetupData getData() {
         return data;
     }
 
