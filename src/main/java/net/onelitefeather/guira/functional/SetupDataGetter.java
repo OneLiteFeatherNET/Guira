@@ -7,21 +7,20 @@ import org.jetbrains.annotations.Nullable;
 import java.util.UUID;
 
 /**
- * Functional interface for getting setup data associated with a specific UUID.
+ * Functional interface for getting setup data associated with a specific {@link UUID}.
  *
- * @param <T> the type of setup data
  * @author theEvilReaper
  * @version 0.1.0
  * @since 0.3.0
  */
 @FunctionalInterface
-public interface SetupDataGetter<T extends SetupData<?>> {
+public interface SetupDataGetter {
 
     /**
-     * Retrieves the setup data for the specified UUID.
+     * Retrieves the setup data for the specified {@link UUID}.
      *
-     * @param uuid the UUID of the player
-     * @return the setup data associated with the UUID, or null if no data exists
+     * @param uuid the {@link UUID} of the player
+     * @return the setup data associated with the {@link UUID}, or null if no data exists
      */
-    @Nullable T getData(@NotNull UUID uuid);
+    @Nullable SetupData getData(@NotNull UUID uuid);
 }

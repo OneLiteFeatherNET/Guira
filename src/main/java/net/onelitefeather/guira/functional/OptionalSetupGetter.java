@@ -8,21 +8,20 @@ import java.util.Optional;
 import java.util.UUID;
 
 /**
- * Functional interface for getting setup data associated with a specific UUID.
+ * Functional interface for getting setup data associated with a specific {@link UUID}.
  *
- * @param <T> the type of setup data
  * @author theEvilReaper
  * @version 0.1.0
  * @since 0.3.0
  */
 @FunctionalInterface
-public interface OptionalSetupGetter<T extends SetupData<?>> {
+public interface OptionalSetupGetter {
 
     /**
-     * Gets the setup data for the given UUID.
+     * Gets the setup data for the given {@link UUID}.
      *
-     * @param uuid the UUID of the player
+     * @param uuid the {@link UUID} of the player
      * @return an Optional containing the setup data if it exists, or an empty Optional if it does not
      */
-    @NotNull Optional<@Nullable T> get(@NotNull UUID uuid);
+    @NotNull Optional<@Nullable SetupData> get(@NotNull UUID uuid);
 }
