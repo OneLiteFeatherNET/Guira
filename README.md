@@ -26,17 +26,14 @@ SetupDataService<MySetupData> service = SetupDataService.create();
 // Add setup data
 UUID uuid = UUID.randomUUID();
 MySetupData data = new MySetupData(uuid, ...);
-        service.
 
-add(uuid, data);
+service.add(uuid, data);
 
 // Retrieve setup data
 Optional<MySetupData> retrieved = service.get(uuid);
 
 // Remove setup data
-service.
-
-remove(uuid);
+service.remove(uuid);
 ```
 
 ### Event Handling
