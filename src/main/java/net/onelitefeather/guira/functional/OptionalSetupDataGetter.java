@@ -15,7 +15,7 @@ import java.util.UUID;
  * @since 0.3.0
  */
 @FunctionalInterface
-public interface OptionalSetupGetter {
+public interface OptionalSetupDataGetter {
 
     /**
      * Gets the setup data for the given {@link UUID}.
