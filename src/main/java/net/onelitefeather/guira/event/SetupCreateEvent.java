@@ -18,6 +18,11 @@ public class SetupCreateEvent implements Event, CancellableEvent {
     private boolean cancelled;
     private final SetupData data;
 
+    /**
+     * Creates a new instance of {@link SetupCreateEvent} with the given {@link SetupData}.
+     *
+     * @param data the setup data that is involved in the event
+     */
     public SetupCreateEvent(@NotNull SetupData data) {
         this.data = data;
     }
