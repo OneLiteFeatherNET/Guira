@@ -10,14 +10,29 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
+/**
+ * The {@link SetupDataServiceImpl} is an implementation of the {@link SetupDataService} interface.
+ * It provides methods to manage setup data associated with unique identifiers (UUIDs).
+ * This service allows adding, removing, retrieving, and clearing setup data.
+ *
+ * @author theEvilReaper
+ * @version 1.0.0
+ * @since 0.1.0
+ */
 public final class SetupDataServiceImpl implements SetupDataService {
 
     private final Map<UUID, SetupData> dataMap;
 
+    /**
+     * Creates a new instance of {@link SetupDataServiceImpl} with an empty data map.
+     */
     SetupDataServiceImpl() {
         this.dataMap = new HashMap<>();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void clear() {
         if (this.dataMap.isEmpty()) return;
