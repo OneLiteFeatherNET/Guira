@@ -1,7 +1,5 @@
 package net.onelitefeather.guira.data;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.UUID;
 
 /**
@@ -33,5 +31,5 @@ public interface SetupData {
      *
      * @return the owner as {@link UUID}
      */
-    @NotNull UUID getId();
+    UUID getId();
 }

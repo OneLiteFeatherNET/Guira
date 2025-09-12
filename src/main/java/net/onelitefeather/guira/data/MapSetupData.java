@@ -2,7 +2,6 @@ package net.onelitefeather.guira.data;
 
 import net.theevilreaper.aves.map.BaseMap;
 import net.theevilreaper.aves.map.MapEntry;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
@@ -22,7 +21,7 @@ public abstract class MapSetupData<T extends BaseMap> implements SetupData {
 
     protected final UUID uuid;
     protected final MapEntry mapEntry;
-    protected T map;
+    protected @Nullable  T map;
 
     /**
      * Creates a new instance of {@link MapSetupData} with the given UUID and map entry.
@@ -30,7 +29,7 @@ public abstract class MapSetupData<T extends BaseMap> implements SetupData {
      * @param uuid     the unique identifier for the map setup data
      * @param mapEntry the map entry containing the map information
      */
-    protected MapSetupData(@NotNull UUID uuid, @NotNull MapEntry mapEntry) {
+    protected MapSetupData(UUID uuid, MapEntry mapEntry) {
         this.uuid = uuid;
         this.mapEntry = mapEntry;
     }
@@ -60,7 +59,7 @@ public abstract class MapSetupData<T extends BaseMap> implements SetupData {
      *
      * @return the map entry as {@link MapEntry}
      */
-    public @NotNull MapEntry getEntry() {
+    public MapEntry getEntry() {
         return this.mapEntry;
     }
 
@@ -69,7 +68,7 @@ public abstract class MapSetupData<T extends BaseMap> implements SetupData {
      *
      * @return the map as {@link BaseMap}
      */
-    public @NotNull UUID getId() {
+    public UUID getId() {
         return this.uuid;
     }
 
@@ -78,7 +77,7 @@ public abstract class MapSetupData<T extends BaseMap> implements SetupData {
      *
      * @return an {@link Optional} containing the map if it exists, otherwise empty
      */
-    public @NotNull Optional<@Nullable T> getMap() {
+    public Optional<@Nullable T> getMap() {
         return Optional.ofNullable(this.map);
     }
 }

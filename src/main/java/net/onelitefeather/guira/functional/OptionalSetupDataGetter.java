@@ -1,7 +1,6 @@
 package net.onelitefeather.guira.functional;
 
 import net.onelitefeather.guira.data.SetupData;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -23,5 +22,5 @@ public interface OptionalSetupDataGetter {
      * @param uuid the {@link UUID} of the player
      * @return an Optional containing the setup data if it exists, or an empty Optional if it does not
      */
-    @NotNull Optional<@Nullable SetupData> get(@NotNull UUID uuid);
+    Optional<@Nullable SetupData> get(UUID uuid);
 }
