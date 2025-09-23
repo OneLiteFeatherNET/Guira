@@ -30,7 +30,7 @@ dependencyResolutionManagement {
         create("libs") {
             version("aves", "1.11.1")
             version("publishdata", "1.4.0")
-            version("bom", "1.4.3")
+            version("bom", "1.4.4")
 
             library("mycelium.bom", "net.onelitefeather", "mycelium-bom").versionRef("bom")
 
