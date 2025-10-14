@@ -3,7 +3,6 @@ package net.onelitefeather.guira.event;
 import net.minestom.server.event.Event;
 import net.minestom.server.event.trait.CancellableEvent;
 import net.onelitefeather.guira.data.SetupData;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * The {@link SetupCreateEvent} can be used to indicate that a setup has started by the owner.
@@ -23,7 +22,7 @@ public class SetupCreateEvent implements Event, CancellableEvent {
      *
      * @param data the setup data that is involved in the event
      */
-    public SetupCreateEvent(@NotNull SetupData data) {
+    public SetupCreateEvent(SetupData data) {
         this.data = data;
     }
 

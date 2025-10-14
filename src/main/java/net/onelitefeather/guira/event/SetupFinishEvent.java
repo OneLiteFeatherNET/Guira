@@ -3,7 +3,6 @@ package net.onelitefeather.guira.event;
 import net.minestom.server.event.Event;
 import net.minestom.server.event.trait.CancellableEvent;
 import net.onelitefeather.guira.data.SetupData;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * The {@link SetupFinishEvent} can be used to indicate that a setup process has been finished by the user.
@@ -24,7 +23,7 @@ public class SetupFinishEvent implements Event, CancellableEvent {
      *
      * @param setupData the setup data of the event
      */
-    public SetupFinishEvent(@NotNull SetupData setupData) {
+    public SetupFinishEvent(SetupData setupData) {
         this.setupData = setupData;
     }
 
@@ -53,7 +52,7 @@ public class SetupFinishEvent implements Event, CancellableEvent {
      *
      * @return the setup data
      */
-    public @NotNull SetupData getData() {
+    public SetupData getData() {
         return setupData;
     }
 }

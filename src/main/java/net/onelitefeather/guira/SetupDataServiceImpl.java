@@ -1,7 +1,6 @@
 package net.onelitefeather.guira;
 
 import net.onelitefeather.guira.data.SetupData;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.UnmodifiableView;
 
 import java.util.Collections;
@@ -51,7 +50,7 @@ public final class SetupDataServiceImpl implements SetupDataService {
      * {@inheritDoc}
      */
     @Override
-    public void add(@NotNull UUID uuid, @NotNull SetupData data) {
+    public void add(UUID uuid, SetupData data) {
         dataMap.put(uuid, data);
     }
 
@@ -59,7 +58,7 @@ public final class SetupDataServiceImpl implements SetupDataService {
      * {@inheritDoc}
      */
     @Override
-    public @NotNull Optional<SetupData> remove(@NotNull UUID uuid) {
+    public Optional<SetupData> remove(UUID uuid) {
         return Optional.ofNullable(this.dataMap.remove(uuid));
     }
 
@@ -67,7 +66,7 @@ public final class SetupDataServiceImpl implements SetupDataService {
      * {@inheritDoc}
      */
     @Override
-    public @NotNull Optional<SetupData> get(@NotNull UUID uuid) {
+    public Optional<SetupData> get(UUID uuid) {
         return Optional.ofNullable(this.dataMap.get(uuid));
     }
 
@@ -75,7 +74,7 @@ public final class SetupDataServiceImpl implements SetupDataService {
      * {@inheritDoc}
      */
     @Override
-    public @NotNull @UnmodifiableView Map<UUID, SetupData> getView() {
+    public @UnmodifiableView Map<UUID, SetupData> getView() {
         return Collections.unmodifiableMap(this.dataMap);
     }
 }

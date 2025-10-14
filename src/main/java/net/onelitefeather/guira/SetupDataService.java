@@ -2,7 +2,6 @@ package net.onelitefeather.guira;
 
 import net.onelitefeather.guira.data.SetupData;
 import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.UnmodifiableView;
 
@@ -27,7 +26,7 @@ public interface SetupDataService {
      * @return a new instance of SetupDataService
      */
     @Contract(pure = true)
-    static @NotNull SetupDataService create() {
+    static SetupDataService create() {
         return new SetupDataServiceImpl();
     }
 
@@ -50,7 +49,7 @@ public interface SetupDataService {
      * @param uuid the unique identifier for the setup data
      * @param data the setup data to add
      */
-    void add(@NotNull UUID uuid, @NotNull SetupData data);
+    void add(UUID uuid, SetupData data);
 
     /**
      * Removes the setup data associated with the given UUID.
@@ -58,7 +57,7 @@ public interface SetupDataService {
      * @param uuid the unique identifier for the setup data
      * @return an optional containing the removed setup data, or empty if not found
      */
-    @NotNull Optional<@Nullable SetupData> remove(@NotNull UUID uuid);
+    Optional<@Nullable SetupData> remove(UUID uuid);
 
     /**
      * Retrieves the setup data associated with the given UUID.
@@ -66,14 +65,13 @@ public interface SetupDataService {
      * @param uuid the unique identifier for the setup data
      * @return an optional containing the setup data, or empty if not found
      */
-    @NotNull Optional<@Nullable SetupData> get(@NotNull UUID uuid);
+    Optional<@Nullable SetupData> get(UUID uuid);
 
     /**
      * Returns an unmodifiable view of the setup data map.
      *
      * @return an unmodifiable view
      */
-    @NotNull
     @UnmodifiableView
     Map<UUID, SetupData> getView();
 }
