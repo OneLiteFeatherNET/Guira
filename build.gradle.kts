@@ -3,7 +3,6 @@ plugins {
     jacoco
     `java-library`
     `maven-publish`
-    alias(libs.plugins.publishdata)
 }
 
 group = "net.onelitefeather"
@@ -31,13 +30,6 @@ dependencies {
     testRuntimeOnly(libs.junit.engine)
 }
 
-publishData {
-    addMainRepo("https://repo.onelitefeather.dev/onelitefeather-releases")
-    addMasterRepo("https://repo.onelitefeather.dev/onelitefeather-releases")
-    addSnapshotRepo("https://repo.onelitefeather.dev/onelitefeather-snapshots")
-    publishTask("jar")
-}
-
 tasks {
     compileJava {
         options.encoding = "UTF-8"
@@ -60,13 +52,10 @@ tasks {
 }
 
 publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            // configure the publication as defined previously.
-            publishData.configurePublication(this)
-            version = publishData.getVersion(false)
-        }
+    publications.create<MavenPublication>("maven") {
+        from(components["java"])
     }
+
     repositories {
         maven {
             authentication {
@@ -75,11 +64,12 @@ publishing {
                     password = System.getenv("ONELITEFEATHER_MAVEN_PASSWORD")
                 }
             }
-
             name = "OneLiteFeatherRepository"
-            // Get the detected repository from the publish data
-            url = uri(publishData.getRepository())
+            url = if (project.version.toString().contains("SNAPSHOT")) {
+                uri("https://repo.onelitefeather.dev/onelitefeather-snapshots")
+            } else {
+                uri("https://repo.onelitefeather.dev/onelitefeather-releases")
+            }
         }
     }
 }
-
