@@ -1,12 +1,5 @@
 rootProject.name = "guira"
 
-pluginManagement {
-    repositories {
-        gradlePluginPortal()
-        maven("https://eldonexus.de/repository/maven-public/")
-    }
-}
-
 dependencyResolutionManagement {
     repositories {
         mavenCentral()
@@ -29,7 +22,6 @@ dependencyResolutionManagement {
     versionCatalogs {
         create("libs") {
             version("aves", "1.11.2")
-            version("publishdata", "1.4.0")
             version("bom", "1.4.5")
 
             library("mycelium.bom", "net.onelitefeather", "mycelium-bom").versionRef("bom")
@@ -43,8 +35,6 @@ dependencyResolutionManagement {
             library("junit.engine", "org.junit.jupiter", "junit-jupiter-engine").withoutVersion()
             library("junit.platform.launcher", "org.junit.platform", "junit-platform-launcher").withoutVersion()
             library("jetbrains.annotation", "org.jetbrains", "annotations").withoutVersion()
-
-            plugin("publishdata", "de.chojo.publishdata").versionRef("publishdata")
         }
     }
 }
