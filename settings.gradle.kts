@@ -28,7 +28,7 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("libs") {
-            version("aves", "1.11.1")
+            version("aves", "1.11.2")
             version("publishdata", "1.4.0")
             version("bom", "1.4.4")
 
