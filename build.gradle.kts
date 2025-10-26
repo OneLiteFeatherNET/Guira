@@ -1,16 +1,15 @@
 plugins {
-    java
     jacoco
     `java-library`
     `maven-publish`
 }
 
 group = "net.onelitefeather"
-version = "0.6.1"
+version = "0.7.0"
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
+        languageVersion.set(JavaLanguageVersion.of(25))
     }
     withJavadocJar()
     withSourcesJar()
@@ -33,12 +32,12 @@ dependencies {
 tasks {
     compileJava {
         options.encoding = "UTF-8"
-        options.release.set(21)
+        options.release.set(25)
     }
 
     compileTestJava {
         options.encoding = "UTF-8"
-        options.release.set(21)
+        options.release.set(25)
     }
 
     test {
