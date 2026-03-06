@@ -19,7 +19,7 @@ public interface SetupDataGetter {
     /**
      * Retrieves the setup data for the specified {@link UUID}.
      *
-     * @param uuid the {@link UUID} of the player
+     * @param uuid the {@link UUID} for the setup data
      * @return the setup data associated with the {@link UUID}, or null if no data exists
      */
     @Nullable SetupData getData(@NotNull UUID uuid);

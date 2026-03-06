@@ -2,7 +2,6 @@ package net.onelitefeather.guira;
 
 import net.onelitefeather.guira.data.SetupData;
 import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.UnmodifiableView;
 
 import java.util.Map;
@@ -12,8 +11,6 @@ import java.util.UUID;
 /**
  * The {@link SetupDataService} is responsible for managing setup data during a runtime session.
  * It allows adding, removing, and retrieving setup data associated with a unique identifier (UUID).
- *
-
  * @author thEvilReaper
  * @version 1.0.0
  * @since 0.1.0
@@ -57,7 +54,7 @@ public interface SetupDataService {
      * @param uuid the unique identifier for the setup data
      * @return an optional containing the removed setup data, or empty if not found
      */
-    Optional<@Nullable SetupData> remove(UUID uuid);
+    Optional<SetupData> remove(UUID uuid);
 
     /**
      * Retrieves the setup data associated with the given UUID.
@@ -65,7 +62,7 @@ public interface SetupDataService {
      * @param uuid the unique identifier for the setup data
      * @return an optional containing the setup data, or empty if not found
      */
-    Optional<@Nullable SetupData> get(UUID uuid);
+    Optional<SetupData> get(UUID uuid);
 
     /**
      * Returns an unmodifiable view of the setup data map.

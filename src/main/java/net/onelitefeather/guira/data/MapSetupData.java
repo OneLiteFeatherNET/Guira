@@ -64,7 +64,7 @@ public abstract class MapSetupData<T extends BaseMap> implements SetupData {
     }
 
     /**
-     * Returns the map of the setup data.
+     * Returns the unique identifier of the setup data.
      *
      * @return the map as {@link BaseMap}
      */
@@ -77,7 +77,7 @@ public abstract class MapSetupData<T extends BaseMap> implements SetupData {
      *
      * @return an {@link Optional} containing the map if it exists, otherwise empty
      */
-    public Optional<@Nullable T> getMap() {
+    public Optional<T> getMap() {
         return Optional.ofNullable(this.map);
     }
 }
