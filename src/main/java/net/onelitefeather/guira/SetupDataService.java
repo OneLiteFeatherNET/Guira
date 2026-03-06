@@ -1,6 +1,7 @@
 package net.onelitefeather.guira;
 
 import net.onelitefeather.guira.data.SetupData;
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.UnmodifiableView;
 
 import java.util.Map;
@@ -10,8 +11,6 @@ import java.util.UUID;
 /**
  * The {@link SetupDataService} is responsible for managing setup data during a runtime session.
  * It allows adding, removing, and retrieving setup data associated with a unique identifier (UUID).
- *
-
  * @author thEvilReaper
  * @version 1.0.0
  * @since 0.1.0
