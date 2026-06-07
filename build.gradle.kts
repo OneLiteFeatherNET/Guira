@@ -16,10 +16,11 @@ java {
 }
 
 dependencies {
-    implementation(platform(libs.mycelium.bom))
     compileOnly(libs.minestom)
     compileOnly(libs.jetbrains.annotation)
     compileOnly(libs.aves)
+
+    implementation(platform(libs.mycelium.bom))
 
     testImplementation(libs.minestom)
     testImplementation(libs.cyano)
