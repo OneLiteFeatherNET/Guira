@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "release-type": "simple",
+  "include-component-in-tag": false,
+  "include-v-in-tag": false,
+  "pull-request-header": "",
+  "bootstrap-sha": "8ac2aea2d469e13ae600ec1e9d930b33adc3f99f",
+  "packages": {
+    ".": {
+      "package-name": "guira",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        { "type": "generic", "path": "build.gradle.kts" }
+      ]
+    }
+  }
+}
