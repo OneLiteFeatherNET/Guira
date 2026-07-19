@@ -1,11 +1,12 @@
 package net.onelitefeather.guira.category;
 
 import net.kyori.adventure.key.Key;
-import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextColor;
 import net.minestom.server.item.Material;
 
 /**
+ * Defines a category that can be used to categorize setup items.
+ *
  * @author theEvilReaper
  * @version 1.0.0
  * @since 0.10.0
