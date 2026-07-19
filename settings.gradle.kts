@@ -31,6 +31,7 @@ dependencyResolutionManagement {
 
             library("junit.api", "org.junit.jupiter", "junit-jupiter-api").withoutVersion()
             library("junit.engine", "org.junit.jupiter", "junit-jupiter-engine").withoutVersion()
+            library("junit.params", "org.junit.jupiter", "junit-jupiter-params").withoutVersion()
             library("junit.platform.launcher", "org.junit.platform", "junit-platform-launcher").withoutVersion()
             library("jetbrains.annotation", "org.jetbrains", "annotations").withoutVersion()
         }
