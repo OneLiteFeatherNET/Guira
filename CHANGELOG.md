@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.10.2](https://github.com/OneLiteFeatherNET/Guira/compare/0.10.1...0.10.2) (2026-08-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency net.onelitefeather:mycelium-bom to v1.8.2 ([#82](https://github.com/OneLiteFeatherNET/Guira/issues/82)) ([f1dc493](https://github.com/OneLiteFeatherNET/Guira/commit/f1dc493b574dab29f49d5cc12a538eabbe1bf3ed))
+* **deps:** update dependency net.theevilreaper:aves to v1.16.1 ([#78](https://github.com/OneLiteFeatherNET/Guira/issues/78)) ([2d65d61](https://github.com/OneLiteFeatherNET/Guira/commit/2d65d61e40e908a25f2f23146e578a3abb39ab5a))
+* **deps:** update dependency net.theevilreaper:aves to v1.16.2 ([#83](https://github.com/OneLiteFeatherNET/Guira/issues/83)) ([ee50716](https://github.com/OneLiteFeatherNET/Guira/commit/ee507160930dd787d10a54808d325c9d372eb747))
+
 ## [0.10.1](https://github.com/OneLiteFeatherNET/Guira/compare/0.10.0...0.10.1) (2026-07-24)
 
 
