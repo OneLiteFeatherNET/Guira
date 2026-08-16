@@ -22,7 +22,7 @@ dependencyResolutionManagement {
     versionCatalogs {
         create("libs") {
             version("aves", "1.16.1")
-            version("bom", "1.8.1")
+            version("bom", "1.8.2")
 
             library("mycelium.bom", "net.onelitefeather", "mycelium-bom").versionRef("bom")
             library("minestom","net.minestom", "minestom").withoutVersion()
