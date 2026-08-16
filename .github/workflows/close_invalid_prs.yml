@@ -6,7 +6,7 @@ on:
 
 jobs:
   close:
-    uses: OneLiteFeatherNET/workflows/.github/workflows/close-invalid-prs.yml@v2.6.0
+    uses: OneLiteFeatherNET/workflows/.github/workflows/close-invalid-prs.yml@v2.8.1
     with:
       protected-branch: "develop"
       comment: "Please do not open pull requests from the `develop` branch, create a new branch instead."
