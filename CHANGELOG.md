@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.4](https://github.com/OneLiteFeatherNET/Guira/compare/0.10.3...0.10.4) (2026-09-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency net.theevilreaper:aves to v1.16.5 ([#96](https://github.com/OneLiteFeatherNET/Guira/issues/96)) ([3854cf1](https://github.com/OneLiteFeatherNET/Guira/commit/3854cf128cea3a54882eac7bcae9672ef8fe7f7e))
+
 ## [0.10.3](https://github.com/OneLiteFeatherNET/Guira/compare/0.10.2...0.10.3) (2026-08-29)
 
 
